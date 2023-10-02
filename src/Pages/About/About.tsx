@@ -15,7 +15,7 @@ const About = () => {
           </div>
 
           <div className='lg:w-1/2 lg:h-full w-full h-auto'>
-            <img src={about_logo} alt="" className='lg:h-full lg:w-auto lg:relative lg:-top-16 lg:left-10' />
+            <img src={about_logo} alt="" className='lg:h-full lg:w-auto lg:relative lg:-top-16 lg:left-10 -z-20' />
           </div>
 
         </div>

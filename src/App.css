@@ -1,15 +1,18 @@
-#home,#about,#events,#team{
+#home,#events{
   height: 100vh;
 }
 #home,#about,#events,#team{
   width: 100vw;
-  padding: 2rem;
+  padding: 1rem;
 }
-#about{
+#about,#team{
   height: max-content;
 }
 #home{
     padding-top: 6rem;
+}
+p{
+  color: rgb(94, 94, 94);
 }
 @media(min-width:1024px){
   #about,#events,#team{
