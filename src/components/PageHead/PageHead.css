@@ -1,9 +1,8 @@
 .team h1{
-    font-size: 2rem;
+    font-size: 1.9rem;
 }
 .team hr{
-    border-color: black;
-    border: 1.5px solid;
+    border: 2px solid;
 }
 @media(min-width:1024px){
     .team h1{

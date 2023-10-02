@@ -1,13 +1,19 @@
 #home,#about,#events,#team{
   height: 100vh;
+}
+#home,#about,#events,#team{
   width: 100vw;
   padding: 2rem;
+}
+#about{
+  height: max-content;
 }
 #home{
     padding-top: 6rem;
 }
-/* @media(max-width:480px){
-  #home,#about,#events,#team{
-    height: max-content;
+@media(min-width:1024px){
+  #about,#events,#team{
+    height: 100vh;
   }
-} */
+  
+}
