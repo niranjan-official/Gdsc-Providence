@@ -1,6 +1,6 @@
 // import React from 'react'
 import './Footer.css'
-import icon from '../../assets/prc_icon.png'
+// import icon from '../../assets/prc_icon.png'
 
 const Footer = () => {
   return (
