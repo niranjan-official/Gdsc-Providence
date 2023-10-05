@@ -10,14 +10,14 @@ const Team = () => {
         <PageHead name='Our Team' />
         <div className='w-full h-full flex lg:flex-row flex-col-reverse'>
 
-          <div className='lg:w-1/2 lg:h-full w-full p-4 lg:pt-16 flex flex-col items-center'>
-            <p className='lg:text-3xl lg:text-left text-center'>
+          <div className='lg:w-1/2 lg:h-full w-full p-4 lg:pt-16 flex flex-col lg:text-left text-center items-center lg:items-start'>
+            <p className='lg:text-3xl '>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate nulla doloribus at delectus itaque, similique optio temporibus? Minima debitis temporibus ab tempore ut, voluptatum in, similique mollitia, architecto deleniti ipsam!
             </p>
-            <button className='w-40 text-xl m-4 mt-8'>View Team</button>
+            <button className='w-40 text-xl mt-8 bg-blue-600 hover:bg-blue-700'>View Team</button>
           </div>
 
-          <div className='lg:w-1/2 lg:h-full w-full h-auto'>
+          <div className='lg:w-1/2 lg:h-full w-full h-auto '>
             <img src={team_logo} alt="" className='lg:h-full lg:w-auto lg:relative lg:-top-16 lg:left-10 -z-20' />
           </div>
 

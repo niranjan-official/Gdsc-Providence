@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=AR+One+Sans&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
-  font-family: "Open Sans";
+  font-family: 'AR One Sans', sans-serif;
   font-weight: 400;
   color: #213547;
   background-color: hsl(0, 0%, 100%);
@@ -12,6 +15,7 @@
 ::-webkit-scrollbar{
   width: 0;
 }
+
 html{
   scroll-behavior: smooth;
 }
@@ -25,15 +29,18 @@ body {
 h1,h2 {
   margin: 0;
 }
+p{
+  font-family: "Open Sans";
+
+}
 button{
   padding: 10px;
-  background-color: #181bd1;
-  color: rgb(254 112 98);
-  font-weight: bolder;
-  border-radius: 10px;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
 }
-button:hover{
-  color: rgb(248, 65, 48);
-  background-color: #020486;
-  
+h3{
+  font-family: "Open Sans";
 }
+
+

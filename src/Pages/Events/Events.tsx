@@ -16,7 +16,7 @@ const Events = () => {
 
           <div className='lg:w-1/2 lg:h-full w-full p-4 lg:pt-16 lg:text-left text-center'>
             <p className='lg:text-3xl'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur soluta ut quod architecto, dignissimos iste accusantium enim libero quia sequi optio sapiente blanditiis vitae voluptatem ipsa modi quidem atque ratione. Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <button className='w-40 text-xl m-4 mt-8'>View More</button>
+            <button className='w-40 text-xl mt-8 bg-blue-600 hover:bg-blue-700'>View More</button>
           </div>
 
         </div>

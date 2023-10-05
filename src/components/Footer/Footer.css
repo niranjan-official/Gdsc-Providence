@@ -1,3 +1,19 @@
 footer{
-    height: 20vh;
+    height: max-content;
+}
+footer h5{
+    font-size: smaller;
+}
+footer .contacts img{
+    height: 2rem;
+    width: auto;
+    margin: 5px;
+}
+@media(min-width:1024px){
+    footer{
+        height: 22vh;
+    }
+    footer .contacts img{
+        height: 3rem;
+    }
 }
