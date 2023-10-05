@@ -1,11 +1,11 @@
-#home,#events{
+#home{
   height: 100vh;
 }
 #home,#about,#events,#team{
   width: 100vw;
   padding: 1rem;
 }
-#about,#team{
+#about,#team,#events{
   height: max-content;
 }
 #home{

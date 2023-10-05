@@ -13,6 +13,7 @@ const Home = () => {
           <h1>Google Developer Student Clubs</h1>
           <h2 className='pt-3 lg:pt-0'>Providence College of Engineering</h2>
           <img src={colors} alt="" className='w-36 h-auto mt-2'/>
+          <p className='mt-10'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, earum delectus aspernatur, aperiam perferendis</p>
         </div>
 
       </div>
