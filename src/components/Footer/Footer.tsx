@@ -12,7 +12,7 @@ const Footer = () => {
 
         <div className='flex flex-col mb-2'>
           <img src={icon} alt="" className='lg:h-1/2 lg:w-auto w-full h-auto' />
-          <div className="flex flex-row lg:flex-col lg:ml-16 ml-14 lg:text-gray-500 text-gray-400">
+          <div className="flex flex-row lg:flex-col lg:ml-16 ml-14 text-gray-500">
             <h5>Angadical South, Ala, Kerala</h5>
             <h5>689122</h5>
           </div>
