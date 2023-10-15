@@ -1,7 +1,7 @@
 // import React from 'react'
 import PageHead from '../../components/PageHead/PageHead'
 import './Events.css'
-import event_logo from '../../assets/event-logo.svg'
+import event_logo from '../../assets/event-logo.png'
 
 const Events = () => {
   return (
@@ -11,7 +11,7 @@ const Events = () => {
         <div className='w-full h-full flex lg:flex-row flex-col'>
 
           <div className='lg:w-1/2 lg:h-full w-full h-auto'>
-            <img src={event_logo} alt="" className='lg:h-full lg:w-auto lg:relative lg:-top-16 -z-20 mt-3 lg:mt-0' />
+            <img src={event_logo} alt="" className='lg:h-auto lg:w-full lg:relative -z-20 mt-3 lg:mt-0' />
           </div>
 
           <div className='lg:w-1/2 lg:h-full w-full p-4 lg:pt-16 lg:text-left text-center'>

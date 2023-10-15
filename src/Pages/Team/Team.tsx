@@ -1,7 +1,7 @@
 // import React from 'react'
 import PageHead from '../../components/PageHead/PageHead'
 import './Team.css'
-import team_logo from '../../assets/team-logo.svg'
+import team_logo from '../../assets/team-logo.png'
 
 const Team = () => {
   return (

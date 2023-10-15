@@ -1,7 +1,7 @@
 // import React from 'react'
 import PageHead from '../../components/PageHead/PageHead'
 import './About.css'
-import about_logo from '../../assets/about-logo.svg'
+import about_logo from '../../assets/about-logo.png'
 
 const About = () => {
   return (
