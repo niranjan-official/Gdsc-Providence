@@ -61,9 +61,9 @@ const Header = () => {
     </ul>
   );
   return (
-    <header className='fixed top-0 shadow-md '>
+    <header className='fixed top-0 shadow-md Z-50'>
 
-      <Navbar className="z-10 h-full max-w-full rounded-none px-4 lg:px-8">
+      <Navbar className="z-50 h-full max-w-full rounded-none px-4 lg:px-8">
         <div className="flex items-center justify-between text-blue-gray-900 header z-50">
           <div className='flex items-center'>
           <img className='w-16 h-auto' src={gdscLogo} alt="" />

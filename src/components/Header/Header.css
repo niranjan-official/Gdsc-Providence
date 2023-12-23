@@ -4,6 +4,7 @@
 header{
     height: 10vh;
     width: 100%;
+    z-index: 1000;
 }
 .header h1{
     font-family: 'AR One Sans', sans-serif;
