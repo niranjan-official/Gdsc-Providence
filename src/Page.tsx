@@ -4,13 +4,11 @@ import About from './Pages/About/About'
 import Events from './Pages/Events/Events'
 import Team from './Pages/Team/Team'
 import Footer from './components/Footer/Footer'
-import Header from './components/Header/Header'
 
 const Page = () => {
   return (
     <Fragment>
 
-      <Header/>
       <Home/>
       <About/>
       <Events/>

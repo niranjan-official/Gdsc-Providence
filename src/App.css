@@ -8,9 +8,6 @@
 #about,#team,#events{
   height: max-content;
 }
-#home{
-    padding-top: 6rem;
-}
 p{
   color: rgb(94, 94, 94);
 }

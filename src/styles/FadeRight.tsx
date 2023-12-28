@@ -2,22 +2,22 @@ import { motion } from "framer-motion";
 import { ReactNode } from "react";
 import PropTypes from "prop-types";
 
-interface FadeProps {
+interface FadeRightProps {
   children: ReactNode;
   width?: "fit-content" | "100%";
 }
 
-const Fade: React.FC<FadeProps> = ({ children, width = "fit-content" }) => {
+const FadeRight: React.FC<FadeRightProps> = ({ children, width = "fit-content" }) => {
   return (
     <motion.div
       style={{ position: "relative", width }}
       variants={{
-        hidden: { opacity: 0, y: 75 },
-        visible: { opacity: 1, y: 0 },
+        hidden: { opacity: 0, x: 75 },
+        visible: { opacity: 1, x: 0 },
       }}
       initial="hidden"
       whileInView="visible"
-      // viewport={{once:true}}
+      viewport={{once:true}}
       transition={{ duration: 1 }}
     >
       {children}
@@ -25,13 +25,13 @@ const Fade: React.FC<FadeProps> = ({ children, width = "fit-content" }) => {
   );
 };
 
-Fade.propTypes = {
+FadeRight.propTypes = {
   children: PropTypes.element.isRequired,
   width: PropTypes.oneOf(["fit-content", "100%"]),
 };
 
-Fade.defaultProps = {
+FadeRight.defaultProps = {
   width: "fit-content",
 };
 
-export default Fade;
+export default FadeRight;

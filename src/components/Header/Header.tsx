@@ -24,7 +24,7 @@ interface HeaderProps {}
 
 export default function Header(_: HeaderProps): JSX.Element {
   return (
-    <Disclosure as="nav">
+    <Disclosure as="nav" className="bg-white bg-opacity-50">
       {({ open }) => (
         <>
           <div className="header mt-4 rounded-3xl mx-4 md:mx-4 lg:mx-auto drop-shadow-md max-w-7xl px-2 sm:px-6 lg:px-8">
