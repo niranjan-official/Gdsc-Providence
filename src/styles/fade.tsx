@@ -1,8 +1,13 @@
-import React from "react";
 import { motion } from "framer-motion";
-import { PropTypes } from "prop-types";
+import { ReactNode } from "react";
+import PropTypes from "prop-types";
 
-function Fade({ children, width }) {
+interface FadeProps {
+  children: ReactNode;
+  width?: "fit-content" | "100%";
+}
+
+const Fade: React.FC<FadeProps> = ({ children, width = "fit-content" }) => {
   return (
     <motion.div
       style={{ position: "relative", width }}
@@ -18,11 +23,13 @@ function Fade({ children, width }) {
       {children}
     </motion.div>
   );
-}
+};
+
 Fade.propTypes = {
   children: PropTypes.element.isRequired,
   width: PropTypes.oneOf(["fit-content", "100%"]),
 };
+
 Fade.defaultProps = {
   width: "fit-content",
 };
