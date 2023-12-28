@@ -1,128 +1,94 @@
-import { useState, useEffect } from 'react'
-import './Header.css'
-import {
-  Navbar,
-  MobileNav,
-  Typography,
-  IconButton,
-} from "@material-tailwind/react";
-import gdscLogo from '../../assets/gdsc-logo.png'
+import { Disclosure } from '@headlessui/react';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import logo from '../../assets/gdsc-logo.png';
+import './Header.css';
 
-const Header = () => {
-  const [openNav, setOpenNav] = useState(false);
-  useEffect(() => {
-    window.addEventListener(
-      "resize",
-      () => window.innerWidth >= 960 && setOpenNav(false)
-    );
-  }, []);
-  const navList = (
-    <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-normal "
-      >
-        <a href="#home" className="flex items-center hover:shadow-lg hover:shadow-yellow-200">
-          Home
-        </a>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-normal"
-      >
-        <a href="#about" className="flex items-center hover:shadow-lg hover:shadow-blue-200">
-          About
-        </a>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-normal"
-      >
-        <a href="#events" className="flex items-center hover:shadow-lg hover:shadow-red-200">
-          Events
-        </a>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-normal"
-      >
-        <a href="#team" className="flex items-center hover:shadow-lg hover:shadow-green-200">
-          Team
-        </a>
-      </Typography>
-    </ul>
-  );
-  return (
-    <header className='fixed top-0 shadow-md Z-50'>
-
-      <Navbar className="z-50 h-full max-w-full rounded-none px-4 lg:px-8">
-        <div className="flex items-center justify-between text-blue-gray-900 header z-50">
-          <div className='flex items-center'>
-          <img className='w-16 h-auto' src={gdscLogo} alt="" />
-          <h1 className='text-2xl ml-3'>GDSC-Providence</h1>
-
-          </div>
-          <div className="flex items-center gap-4">
-            <div className="mr-4 hidden lg:block">{navList}</div>
-            <IconButton
-              variant="text"
-              className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
-              ripple={false}
-              onClick={() => setOpenNav(!openNav)}
-            >
-              {openNav ? (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  className="h-6 w-6"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              ) : (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
-              )}
-            </IconButton>
-          </div>
-        </div>
-        <MobileNav open={openNav}>
-          <div className='bg-white p-2 bg-opacity-70'>
-            {navList}
-            </div>
-        </MobileNav>
-      </Navbar>
-
-
-
-
-    </header>
-  )
+interface NavigationItem {
+  name: string;
+  href: string;
+  current: boolean;
 }
 
-export default Header
+const navigation: NavigationItem[] = [
+  { name: 'Home', href: '/#home', current: true },
+  { name: 'About', href: '/#about', current: false },
+  { name: 'Events', href: '/#events', current: false },
+  { name: 'Team', href: '/#team', current: false },
+];
+
+function classNames(...classes: (string | boolean)[]): string {
+  return classes.filter(Boolean).join(' ');
+}
+
+interface HeaderProps {}
+
+export default function Header(_: HeaderProps): JSX.Element {
+  return (
+    <Disclosure as="nav">
+      {({ open }) => (
+        <>
+          <div className="header mt-4 rounded-3xl mx-4 md:mx-4 lg:mx-auto drop-shadow-md max-w-7xl px-2 sm:px-6 lg:px-8">
+            <div className="relative flex h-16 items-center justify-between">
+              <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                {/* Mobile menu button*/}
+                <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-900 focus:outline-none">
+                  <span className="absolute -inset-0.5" />
+                  <span className="sr-only">Open main menu</span>
+                  {open ? (
+                    <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
+                  ) : (
+                    <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
+                  )}
+                </Disclosure.Button>
+              </div>
+              <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-between">
+                <div className="flex flex-shrink-0 items-center">
+                  <img className="h-14 w-auto" src={logo} alt="Your Company" />
+                  <h1 className="ml-4 text-2xl">GDSC-PRC</h1>
+                </div>
+                <div className="hidden sm:ml-6 sm:flex items-center mr-10">
+                  <div className="flex space-x-4">
+                    {navigation.map((item) => (
+                      <a
+                        key={item.name}
+                        href={item.href}
+                        className={classNames(
+                          item.current
+                            ? 'border-b-4 border-b-blue-500 text-black'
+                            : 'text-black hover:bg-blue-100 rounded-md',
+                          'px-3 py-2 text-md font-medium'
+                        )}
+                        aria-current={item.current ? 'page' : undefined}
+                      >
+                        {item.name}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <Disclosure.Panel className="sm:hidden">
+            <div className="space-y-1 px-2 pb-3 pt-2">
+              {navigation.map((item) => (
+                <Disclosure.Button
+                  key={item.name}
+                  as="a"
+                  href={item.href}
+                  className={classNames(
+                    item.current ? 'bg-blue-100 text-black' : 'hover:text-black',
+                    'block rounded-md px-3 py-2 text-base font-medium'
+                  )}
+                  aria-current={item.current ? 'page' : undefined}
+                >
+                  {item.name}
+                </Disclosure.Button>
+              ))}
+            </div>
+          </Disclosure.Panel>
+        </>
+      )}
+    </Disclosure>
+  );
+}

@@ -6,7 +6,7 @@ import colors from '../../assets/colors.png'
 const Home = () => {
   return (
     <section id='home' className='bg'>
-      <div className='h-full w-full flex justify-between items-center lg:items-start home'>
+      <div className='h-full w-full flex justify-between items-center home'>
 
         <div className='flex flex-col items-center justify-center lg:justify-start text-center p-2 w-full h-full lg:mt-20 lg:pb-0 pb-20  '>
           <img src={logo} alt="" className='lg:w-40 w-28 h-auto' />

@@ -1,8 +1,21 @@
 import Header from '../../components/Header/Header'
 import member from '../../assets/team/name.webp'
+import { useEffect } from 'react'
 
+interface Member{
+  name: string,
+  role: string,
+  description: string,
+  image: string
+}
 const Info = () => {
-  const members = [
+
+  useEffect(()=>{
+    window.scrollTo({
+      top:0
+  })
+  },[])
+  const members:Member[] = [
     {
       name: "Anand Sudeep",
       role: "GDSC Lead",
@@ -23,17 +36,17 @@ const Info = () => {
     },
   ]
   return (
-    <div className='h-screen w-screen'>
+    <div className='h-max w-screen'>
         <Header/>
-        <div className='w-full h-full flex flex-col mt-20'>
+        <div className='w-full flex flex-col mt-4'>
           <div className='flex flex-col p-5 justify-center items-center'>
             <h1 className='text-4xl'>GDSC 2023-24</h1>
             <h2 className='text-2xl '>Team Members</h2>
           </div>
-          <div className='flex flex-col lg:flex-row lg:flex-wrap items-center lg:justify-evenly p-12 pt-4'>
+          <div className='flex flex-col sm:flex-row sm:flex-wrap items-center sm:justify-evenly p-12 pt-4'>
             {
-              members.map((obj)=>(
-                <div className='w-full lg:w-1/4 h-max flex flex-col shadow-md shadow-slate-500 rounded-lg mb-6 lg:mb-10 lg:mr-8'>
+              members.map((obj,key)=>(
+                <div key={key} className='w-full lg:w-1/4 h-max flex flex-col shadow-md shadow-slate-500 rounded-lg mb-6 lg:mb-10 lg:mr-8'>
                     <div className='flex justify-center bg-blue-500 w-full h-2/3'>
                       <div className='rounded-full h-32 w-32 bg-white relative -bottom-16 shadow-md'>
                         <img src={obj.image} className='w-full h-full' alt="" />
