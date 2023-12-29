@@ -11,20 +11,20 @@ const Events = () => {
     <section id="events" className="bg">
       <div className="w-full h-full">
         <PageHead name="What we do ?" />
-        <div className="w-full h-full flex flex-col sm:flex-row">
+        <div className="w-full h-full flex flex-col sm:flex-row overflow-hidden">
           <div className="sm:w-1/2 sm:h-full w-full h-auto sm:pt-14">
             <FadeLeft>
               <img
                 src={event_logo}
                 alt=""
-                className="lg:h-auto lg:w-full lg:relative -z-20 mt-3 lg:mt-0"
+                className="lg:h-auto lg:w-full lg:relative mt-3 lg:mt-0"
               />
             </FadeLeft>
           </div>
 
           <div className="lg:w-1/2 lg:h-full w-full p-4 lg:pb-16 lg:text-left text-center flex flex-col items-center justify-center">
             <FadeRight>
-              <p className="sm:text-3xl text-justify">
+              <p className="sm:text-3xl text-justify ">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 Tenetur soluta ut quod architecto, dignissimos iste accusantium
                 enim libero quia sequi optio sapiente blanditiis vitae

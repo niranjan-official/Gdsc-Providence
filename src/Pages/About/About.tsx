@@ -10,7 +10,7 @@ const About = () => {
     <section id='about' className='bg'>
       <div className='w-full h-full flex flex-col' >
         <PageHead name='Our Mission' />
-        <div className='w-full h-full flex flex-col-reverse sm:flex-row '>
+        <div className='w-full h-full flex flex-col-reverse sm:flex-row overflow-hidden'>
 
           <div className='lg:w-1/2 lg:h-full w-full p-4 
           sm:pb-16 flex justify-center items-center'>
@@ -21,7 +21,7 @@ const About = () => {
 
           <div className='lg:w-1/2 lg:h-full w-full h-auto'>
           <FadeRight>
-            <img src={about_logo} alt="" className='lg:h-full lg:w-auto lg:relative lg:-top-16 lg:left-10 -z-20' />
+            <img src={about_logo} alt="" className='lg:h-full lg:w-auto lg:relative lg:-top-16 lg:left-10' />
           </FadeRight>
           </div>
 

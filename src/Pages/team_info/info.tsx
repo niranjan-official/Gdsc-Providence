@@ -37,6 +37,7 @@ const Info = () => {
   ]
   return (
     <div className='h-max w-screen'>
+      <div className="fixed bg w-full h-screen -z-10 home-animate"></div>
         <Header/>
         <div className='w-full flex flex-col mt-4'>
           <div className='flex flex-col p-5 justify-center items-center'>
@@ -46,7 +47,7 @@ const Info = () => {
           <div className='flex flex-col sm:flex-row sm:flex-wrap items-center sm:justify-evenly p-12 pt-4'>
             {
               members.map((obj,key)=>(
-                <div key={key} className='w-full md:w-1/3 lg:w-1/4 h-max flex flex-col shadow-md shadow-slate-500 rounded-lg mb-6 sm:mb-10 sm:mr-8'>
+                <div key={key} className='w-full md:w-1/3 lg:w-1/4 h-max flex flex-col bg-white shadow-md shadow-slate-500 rounded-lg mb-6 sm:mb-10 sm:mr-8'>
                     <div className='flex justify-center bg-blue-500 w-full h-2/3'>
                       <div className='rounded-full h-32 w-32 bg-white relative -bottom-16 shadow-md'>
                         <img src={obj.image} className='w-full h-full' alt="" />

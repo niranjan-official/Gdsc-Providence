@@ -12,7 +12,7 @@ const Team = () => {
     <section id="team" className="bg">
       <div className="w-full h-full">
         <PageHead name="Our Team" />
-        <div className="w-full h-full flex flex-col-reverse sm:flex-row ">
+        <div className="w-full h-full flex flex-col-reverse sm:flex-row overflow-hidden">
           <div className="lg:w-1/2 lg:h-full w-full p-4 sm:pb-16 flex flex-col lg:text-left text-center items-center justify-center lg:items-start">
             <FadeLeft>
               <p className="sm:text-3xl text-justify">
@@ -22,13 +22,13 @@ const Team = () => {
                 in, similique mollitia, architecto deleniti ipsam!
               </p>
             </FadeLeft>
+              <Link to="/team" >
             <FadeUp>
-              <Link to="/team/" >
                 <button className="w-40 text-xl mt-8 bg-blue-600 hover:bg-blue-700 text-center">
                   View Team
                 </button>
-              </Link>
             </FadeUp>
+              </Link>
           </div>
 
           <div className="lg:w-1/2 lg:h-full w-full h-auto">
@@ -36,7 +36,7 @@ const Team = () => {
               <img
                 src={team_logo}
                 alt=""
-                className="lg:h-full lg:w-auto lg:relative lg:-top-16 lg:left-10 -z-20"
+                className="lg:h-full lg:w-auto lg:relative lg:-top-16 lg:left-10"
               />
             </FadeRight>
           </div>

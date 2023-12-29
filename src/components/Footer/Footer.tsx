@@ -9,7 +9,7 @@ import gdsc_logo from '../../assets/gdsc-logo.png'
 const Footer = () => {
   return (
     <footer>
-      <div className='w-full h-full flex lg:flex-row flex-col border-t-2 border-gray-400 p-2 justify-center lg:justify-between lg:items-stretch items-center'>
+      <div className='w-full h-full flex lg:flex-row flex-col border-t-2 bg-white border-gray-400 p-2 justify-center lg:justify-between lg:items-stretch items-center'>
 
         <div className='flex flex-col mb-2'>
           <div className="flex lg:flex-row flex-col lg:items-start items-center">

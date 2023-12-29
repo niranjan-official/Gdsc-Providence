@@ -12,7 +12,7 @@ const PageHead = ({ name }: Name) => {
       <div className="flex lg:flex-row flex-col items-center team">
         <FadeUp>
           <hr
-            className="lg:w-32 lg:block hidden"
+            className="lg:w-32 lg:block hidden mt-2"
             style={{ borderColor: "#f9ab00" }}
           />
         </FadeUp>
