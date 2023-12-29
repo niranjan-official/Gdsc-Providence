@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=AR+One+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Kanit:ital,wght@1,500&family=PT+Serif&display=swap');
 
 #home{
     background: url('../../assets/vector.avif');
@@ -6,7 +6,9 @@
     background-repeat: no-repeat;
     background-size: cover;
     padding-bottom: 1rem;
-    
+}
+.home-animate{
+    animation: float 2s infinite;
 }
 .home h1,h2{
     font-family: 'AR One Sans', sans-serif;
@@ -19,6 +21,9 @@
     color: rgb(82, 82, 82);
     font-size: 0.9rem;
 }
+.home p{
+    font-family: 'Dancing Script', cursive;
+}
 @media(min-width:1024px){
 
     .home h1{
@@ -26,5 +31,13 @@
     }
     .home h2{
         font-size: 1.2rem;
+    }
+}
+@keyframes float{
+    0%,100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-10px);
     }
 }

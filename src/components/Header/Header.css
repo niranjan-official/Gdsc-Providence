@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=AR+One+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,500&family=PT+Serif&display=swap');
 
 
 .header{
@@ -6,6 +6,6 @@
     box-shadow: rgba(38, 175, 255, 0.466) 0px 7px 29px 0px;
 }
 .header h1{
-    font-family: 'AR One Sans', sans-serif;
+    font-family: 'Kanit', sans-serif;
 
 }

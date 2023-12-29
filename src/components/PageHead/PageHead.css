@@ -1,6 +1,7 @@
+ @import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+
 .team h1{
-    font-family: "Open Sans";
-    font-size: 1.9rem;
+    font-family: 'PT Serif', serif;
 }
 .team hr{
     border: 2px solid;

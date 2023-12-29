@@ -1,7 +1,7 @@
 // import React from 'react'
 import "./Home.css";
-import logo from "../../assets/gdsc-logo.png";
-import colors from "../../assets/colors.png";
+import logo from "../../assets/gdsc-logo.svg";
+import colors from "../../assets/colors.svg";
 import Header from "../../components/Header/Header";
 import FadeDown from "../../styles/fadeDown";
 import FadeUp from "../../styles/fadeUp";
@@ -13,7 +13,7 @@ const Home = () => {
     <section id="home">
       <Header />
       <div className="h-full w-full flex justify-between items-center home">
-        <div className="flex flex-col items-center justify-center text-center p-2 w-full h-full  pb-20  ">
+        <div className="flex flex-col items-center justify-center text-center p-2 w-full h-full  pb-20  home-animate">
           <FadeUp>
             <img src={logo} alt="" className="lg:w-40 w-28 h-auto" />
           </FadeUp>
@@ -30,8 +30,8 @@ const Home = () => {
             </FadeRight>
           <FadeDown>
             <p className="mt-10">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo,
-              earum delectus aspernatur, aperiam perferendis
+              " Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo,
+              earum delectus aspernatur, aperiam perferendis ""
             </p>
           </FadeDown>
         </div>

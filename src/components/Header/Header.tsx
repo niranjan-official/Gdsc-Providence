@@ -44,7 +44,7 @@ export default function Header(_: HeaderProps): JSX.Element {
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-between">
                 <div className="flex flex-shrink-0 items-center">
                   <img className="h-14 w-auto" src={logo} alt="Your Company" />
-                  <h1 className="ml-4 text-2xl">GDSC-PRC</h1>
+                  <h1 className="ml-4 text-2xl">GDSC - PRC</h1>
                 </div>
                 <div className="hidden sm:ml-6 sm:flex items-center mr-10">
                   <div className="flex space-x-4">
